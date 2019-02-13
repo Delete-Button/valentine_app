@@ -5,11 +5,13 @@ import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import android.view.View;
@@ -22,7 +24,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     ImageView image;
 
-    private boolean note = false;
+    //private boolean note = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void button1(View view){
+        Snackbar.make(view, "Check Your Notifications!", Snackbar.LENGTH_LONG).show();
+    }
+    /*
     private void button1(View view) {
         if (note == true) {
             note = false;
@@ -86,4 +92,7 @@ public class MainActivity extends AppCompatActivity {
         note = true;
         createNotification();}
     }
+    */
+
+
 }
